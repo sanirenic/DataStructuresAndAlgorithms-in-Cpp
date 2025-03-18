@@ -16,6 +16,7 @@ int findContentChildren(vector<int>& greed, vector<int>& cookieSize){
     int m=cookieSize.size();
 
     sort(greed.begin(), greed.end());
+    sort(cookieSize.begin(), cookieSize.end());
     int l=0;
     int r=0;
 
