@@ -7,14 +7,12 @@ write a recursive function that returns an array containing the preorder travers
 
 using namespace std;
 
-// Node structure for
-// the binary tree
+
 struct Node {
     int data;
     Node* left;
     Node* right;
-    // Constructor to initialize
-    // the node with a value
+    
     Node(int val) : data(val), left(nullptr), right(nullptr) {}
 };
 
@@ -37,11 +35,11 @@ vector<int> preOrder(Node* root){
 
 int main()
 {
-    Node* root = new Node(1);
-    root->left = new Node(2);
-    root->right = new Node(3);
-    root->left->left = new Node(4);
-    root->left->right = new Node(5);
+    Node* root = new Node(3);
+    root->left = new Node(4);
+    root->right = new Node(8);
+    root->left->left = new Node(10);
+    root->left->right = new Node(12);
 
     vector<int> result = preOrder(root);
 
