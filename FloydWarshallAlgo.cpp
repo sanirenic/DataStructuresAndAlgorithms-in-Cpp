@@ -1,7 +1,5 @@
-
 #include <bits/stdc++.h>
 using namespace std;
-
 
 class Solution {
 public:
@@ -25,9 +23,6 @@ public:
 			}
 		}
 
-
-
-
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
 				if (matrix[i][j] == 1e9) {
@@ -37,7 +32,6 @@ public:
 		}
 	}
 };
-
 
 int main() {
 
@@ -59,6 +53,5 @@ int main() {
 		}
 		cout << endl;
 	}
-
 	return 0;
 }
