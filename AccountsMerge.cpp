@@ -1,7 +1,6 @@
-
 #include <bits/stdc++.h>
 using namespace std;
-//User function Template for C++
+
 class DisjointSet {
     vector<int> rank, parent, size;
 public:
