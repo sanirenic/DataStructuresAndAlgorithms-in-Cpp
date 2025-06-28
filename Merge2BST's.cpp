@@ -2,7 +2,6 @@
 #include <stack>
 using namespace std;
 
-// Definition for a binary tree node.
 struct TreeNode {
     int val;
     TreeNode* left;
@@ -40,14 +39,7 @@ public:
     }
 };
 
-// Helper function to build the BST manually
 TreeNode* buildExampleTree() {
-    // Tree structure:
-    //       7
-    //     /   \
-    //    3     15
-    //         /  \
-    //        9    20
 
     TreeNode* root = new TreeNode(7);
     root->left = new TreeNode(3);
