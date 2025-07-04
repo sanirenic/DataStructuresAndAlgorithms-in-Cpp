@@ -1,6 +1,3 @@
-
-
-
 int maxLen(int A[], int n)
 {
     // Your code here
