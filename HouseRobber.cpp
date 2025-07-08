@@ -1,5 +1,4 @@
-include <bits/stdc++.h>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 long long int solve(vector<int>& arr){
@@ -39,7 +38,6 @@ long long int robStreet(int n, vector<int> &arr){
     
     return max(ans1,ans2);
 }
-
 
 int main() {
 
