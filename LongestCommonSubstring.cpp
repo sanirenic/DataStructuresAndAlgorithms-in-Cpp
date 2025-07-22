@@ -1,5 +1,4 @@
-
-#include 
+#include <bits/stdc++.h>
 using namespace std;
 
 // Function to find the length of the Longest Common Substring (LCS)
@@ -8,7 +7,7 @@ int lcs(string &s1, string &s2){
     int m = s2.size();
     
     // Create a 2D DP table with dimensions (n+1) x (m+1)
-    vector> dp(n+1, vector(m+1, 0));
+    vector<vector<int>> dp(n+1, vector(m+1, 0));
 
     int ans = 0; // Initialize the answer variable
 
