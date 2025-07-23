@@ -1,3 +1,11 @@
+/*Problem Statement: Implement a Trie data structure that supports the following methods:
+
+Insert (word): To insert a string `word` in the Trie.
+Count Words Equal To (word): Return the count of occurrences of the string word in the Trie.
+Count Words Starting With (prefix): Return the count of words in the Trie that have the string “prefix” as a prefix.
+Erase (word): Delete one occurrence of the string word from the Trie.*/
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -88,3 +96,5 @@ public:
         delete root;
     }
 };
+
+
