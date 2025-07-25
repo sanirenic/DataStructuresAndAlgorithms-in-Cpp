@@ -21,4 +21,3 @@ int main() {
 
   cout<<"The maximum profit by selling the stock is "<<maximumProfit(Arr);
 }
-Ou
