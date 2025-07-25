@@ -1,4 +1,3 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -39,8 +38,8 @@ int editDistance(string& S1, string& S2) {
 }
 
 int main() {
-    string s1 = "horse";
-    string s2 = "ros";
+    string s1 = "rope";
+    string s2 = "elope";
 
     // Call the editDistance function and print the result
     cout << "The minimum number of operations required is: " << editDistance(s1, s2);
