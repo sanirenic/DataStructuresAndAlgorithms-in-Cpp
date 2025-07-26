@@ -62,3 +62,13 @@ string longestCompleteString(vector<string>& words) {
 
     return trie.findLongestCompleteString();
 }
+
+int main() {
+    vector<string> nums1 = {"n", "ni", "nin", "ninj", "ninja", "nil"};
+    cout << longestCompleteString(nums1) << endl; // ninja
+
+    vector<string> nums2 = {"ninja", "night", "nil"};
+    cout << longestCompleteString(nums2) << endl; // None
+
+    return 0;
+}
