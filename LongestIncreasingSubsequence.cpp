@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Function to find the length of the longest increasing subsequence
 int getAns(int arr[], int n, int ind, int prev_index, vector<vector<int>>& dp) {
     // Base condition
     if (ind == n)
