@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include <vector>
 #include <string>
 using namespace std;
@@ -28,4 +29,15 @@ string shortestPalindrome(string s) {
     string suffix = s.substr(longestPalPrefix);
     reverse(suffix.begin(), suffix.end());
     return suffix + s;
+}
+
+int main() {
+    string s;
+    cout << "Enter a string: ";
+    cin >> s;
+
+    string result = shortestPalindrome(s);
+    cout << "Shortest palindrome: " << result << endl;
+
+    return 0;
 }
