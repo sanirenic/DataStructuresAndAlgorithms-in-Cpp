@@ -1,7 +1,7 @@
 #include <iostream>
-#include <algorithm>
 #include <vector>
 #include <string>
+#include <algorithm> // ✅ Required for reverse()
 using namespace std;
 
 vector<int> computeLPS(const string &pattern) {
@@ -22,7 +22,7 @@ vector<int> computeLPS(const string &pattern) {
 
 string shortestPalindrome(string s) {
     string rev = s;
-    reverse(rev.begin(), rev.end());
+    reverse(rev.begin(), rev.end()); // ✅ Needs <algorithm>
     string combined = s + "#" + rev;
     vector<int> lps = computeLPS(combined);
     int longestPalPrefix = lps.back();
