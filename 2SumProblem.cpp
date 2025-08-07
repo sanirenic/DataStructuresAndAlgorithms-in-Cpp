@@ -58,9 +58,9 @@ int main() {
     int target = 14;
 
     // Try different approaches
-    cout << "Variant 1 (YES/NO): " << twoSumHashing_1(arr, target) << endl;
+    cout << "Variant 1 (YES/NO): " << twoSumTwoPointers_1(arr, target) << endl;
     
-    pair<int, int> result = twoSumHashing_2(arr, target);
+    pair<int, int> result = twoSumTwoPointers_2(arr, target);
     cout << "Variant 2 (indices): [" << result.first << ", " << result.second << "]" << endl;
 
     return 0;
