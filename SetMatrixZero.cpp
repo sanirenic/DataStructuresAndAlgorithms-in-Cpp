@@ -37,3 +37,13 @@ void setMatrixZero(vector<vector<int>> &Matrix){
         for(int j=0; j<n; j++) Matrix[0][j]=0;
     }
 }
+
+int main() {
+    vector<vector<int>> Matrix = {{0,1,2,0},{3,4,5,2},{1,3,1,5}};
+     setMatrixZero(Matrix);
+
+     for (auto &row : Matrix) {
+         for (int val : row) cout << val << " ";
+         cout << "\n";
+     }
+ }
