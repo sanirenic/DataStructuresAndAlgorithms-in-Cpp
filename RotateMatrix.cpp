@@ -19,11 +19,11 @@ int main(){
     rotate(arr);
     cout<<"rotated image "<<endl;
     for(int i=0; i<arr.size(); i++){
-        for(int j=0; i<arr[0].size(); j++){
+        for(int j=0; j<arr[0].size(); j++){
             cout<<arr[i][j]<<" ";
         }
 
-        cout<<"n";
+        cout<<"\n";
     }
 
 }
