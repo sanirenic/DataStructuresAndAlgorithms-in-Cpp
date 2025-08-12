@@ -15,17 +15,15 @@ void rotate(vector<vector<int>> & matrix){
 }
 
 int main(){
-    vector<vector<int>> matrix={{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    rotate(matrix);
+    vector<vector<int>> arr={{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    rotate(arr);
     cout<<"rotated image "<<endl;
-    for(int i=0; i<matrix.size(); i++){
-        for(int j=0; i<matrix[0].size(); j++){
-            cout<<matrix[i][j]<<" ";
+    for(int i=0; i<arr.size(); i++){
+        for(int j=0; i<arr[0].size(); j++){
+            cout<<arr[i][j]<<" ";
         }
 
-        cout<<endl;
+        cout<<"n";
     }
-
-    return 0;
 
 }
