@@ -11,7 +11,7 @@ void mergeArray(vector<int> &arr1, vector<int> &arr2){
     };
     while(gap>0){
         int i=0, j=gap;
-        wgile(j<(n+m)){
+        while(j<(n+m)){
             if(i<n && j<n && arr1[i]>arr1[j])
             swap(arr1[i], arr1[j]);
 
