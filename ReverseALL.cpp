@@ -18,7 +18,7 @@ class Node{
 };
 
 Node* reverseLL(Node* head){
-    if(head==NULL || head->next=NULL){
+    if(head==NULL || head->next==NULL){
         return head;
     }
     Node* newHead=reverseLL(head->next);
