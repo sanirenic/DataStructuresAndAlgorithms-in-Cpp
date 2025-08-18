@@ -17,12 +17,12 @@ class Node{
     }
 };
 
-Node* sortTwoLL(Node*list1, NOde*list2){
+Node* sortTwoLL(Node*list1, Node*list2){
     Node* dummyNode=new Node(-1);
     Node* temp=dummyNode;
 
     while(list1!=nullptr && list2!=nullptr){
-        if(lis1->data<=list2->data){
+        if(list1->data<=list2->data){
             temp->next=list1;
             list1=list1->next;
         }
