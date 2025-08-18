@@ -55,6 +55,6 @@ int main() {
     head->next->next->next = new Node(arr[3]);
     head->next->next->next->next = new Node(arr[4]);
 
-    head = DeleteNthNodefromEnd(head, N);
+    head = DeleteNthNodeFromEnd(head, N);
     printLL(head);
 }
