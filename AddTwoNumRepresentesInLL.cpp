@@ -11,7 +11,7 @@ struct ListNode {
 
 class Solution{
     public:
-    listNode* addTwoNumbers(ListNode* l1, ListNode* l2){
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2){
         ListNode *dummy=new ListNode();
         ListNode *temp=dummy;
 
