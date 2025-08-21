@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-
 using namespace std;
 class Solution {
   public:
@@ -8,9 +7,9 @@ class Solution {
         ans.push_back(sum);
         return;
       }
-      //element is picked
+
       subsetSumsHelper(ind + 1, arr, n, ans, sum + arr[ind]);
-      //element is not picked
+     
       subsetSumsHelper(ind + 1, arr, n, ans, sum);
     }
   vector < int > subsetSums(vector < int > arr, int n) {
