@@ -2,7 +2,7 @@
 using namespace std;
 
 void insertSorted(stack<int> &st, int x){
-    if(st.empty()||st.top<x){
+    if(st.empty()||st.top()<x){
         st.push(x);
         return;
     }
