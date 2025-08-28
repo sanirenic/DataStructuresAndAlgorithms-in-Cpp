@@ -6,7 +6,7 @@ string expandFromCenter(string &s, int left, int right){
         left--;
         right++;
     }
-    return s.substr(left+1, roght-left-1);
+    return s.substr(left+1, right-left-1);
 
 }
 
