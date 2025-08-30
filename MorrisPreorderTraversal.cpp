@@ -27,7 +27,7 @@ vector<int> morrisPreorderTraversal(TreeNode* root){
                 curr=curr->left;
             }
             else{
-                pred->right=Null;
+                pred->right=NULL;
                 curr=curr->right;
             }
         }
@@ -35,15 +35,8 @@ vector<int> morrisPreorderTraversal(TreeNode* root){
     return result;
 }
 
-// Driver code
 int main() {
-    /*
-            1
-           / \
-          2   3
-         / \
-        4   5
-    */
+     
     TreeNode* root = new TreeNode(1);
     root->left = new TreeNode(2);
     root->right = new TreeNode(3);
