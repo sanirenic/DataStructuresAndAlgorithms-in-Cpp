@@ -22,7 +22,7 @@ class Solution{
             dfs(root->left, path, res);
             dfs(root->right, path, res);
         }
-        path.push_back();
+        path.pop_back();
     }
     vector<vector<int>> binaryTreePaths(TreeNode* root){
         vector<vector<int>> res;
@@ -31,3 +31,29 @@ class Solution{
         return res;
     }
 };
+
+int main() {
+
+    TreeNode* root = new TreeNode(1);
+    root->left = new TreeNode(2);
+    root->right = new TreeNode(3);
+    root->left->right = new TreeNode(5);
+
+    Solution sol;
+    vector<vector<int>> paths = sol.binaryTreePaths(root);
+
+    cout << "Root-to-Leaf Paths:" << endl;
+    for (auto &path : paths) {
+        for (int val : path) {
+            cout << val << " ";
+        }
+        cout << endl;
+    }
+
+    delete root->left->right;
+    delete root->left;
+    delete root->right;
+    delete root;
+
+    return 0;
+}
