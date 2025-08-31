@@ -15,7 +15,7 @@ class Solution{
         if(!root) return 0;
         long long ans=0;
         queue<pair<TreeNode*, long long>> q;
-        q.pusj({root, 0});
+        q.push({root, 0});
 
         while(!q.empty()){
             int size=q.size();
@@ -35,19 +35,7 @@ class Solution{
 };
 
 int main() {
-    /*
-        Example tree:
-                1
-               / \
-              3   2
-             /     \
-            5       9
-           /         \
-          6           7
-
-        Width at last level = indices [0..7] → width = 8
-    */
-
+   
     TreeNode* root = new TreeNode(1);
     root->left = new TreeNode(3);
     root->right = new TreeNode(2);
@@ -59,7 +47,6 @@ int main() {
     Solution sol;
     cout << "Maximum Width of Binary Tree = " << sol.widthOfBinaryTree(root) << endl;
 
-    // Free memory (good practice)
     delete root->left->left->left;
     delete root->left->left;
     delete root->left;
