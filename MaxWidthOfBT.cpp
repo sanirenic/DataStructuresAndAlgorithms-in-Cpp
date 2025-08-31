@@ -24,10 +24,10 @@ class Solution{
 
             for(int i=0; i<size; i++){
                 auto[node, idx]=q.front(); q.pop();
-                idx=-first;
+                idx-=first;
 
                 if(node->left) q.push({node->left, 2* idx+1});
-                if(node->right) q.push({node->right, 2* idex+2});
+                if(node->right) q.push({node->right, 2* idx+2});
             }
         }
         return(int) ans;
