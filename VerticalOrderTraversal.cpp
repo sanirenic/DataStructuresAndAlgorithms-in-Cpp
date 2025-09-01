@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Definition of a Node in the Binary Tree
 struct Node {
     int data;
     Node* left;
@@ -11,12 +10,12 @@ struct Node {
 
 class Solution {
 public:
-    // Function to perform Vertical Order Traversal
+
     vector<vector<int>> verticalOrder(Node* root) {
         if (!root) return {};
         
-        map<int, vector<int>> nodes;   // Horizontal Distance (HD) -> list of values
-        queue<pair<Node*, int>> q;     // Node + HD
+        map<int, vector<int>> nodes;   
+        queue<pair<Node*, int>> q;    
         q.push({root, 0});
         
         while (!q.empty()) {
@@ -30,14 +29,14 @@ public:
         }
         
         vector<vector<int>> result;
-        for (auto& [hd, vals] : nodes) {
-            result.push_back(vals);
-        }
+        for (auto& it : nodes) {
+    result.push_back(it.second);
+}
+
         return result;
     }
 };
 
-// Helper function to print result
 void printVerticalOrder(const vector<vector<int>>& res) {
     for (const auto& level : res) {
         for (int val : level) {
@@ -47,17 +46,7 @@ void printVerticalOrder(const vector<vector<int>>& res) {
     }
 }
 
-// Example usage
 int main() {
-    /*
-             1
-           /   \
-          2     3
-         / \   / \
-        4   5 6   7
-               \   
-                8
-    */
     
     Node* root = new Node(1);
     root->left = new Node(2);
