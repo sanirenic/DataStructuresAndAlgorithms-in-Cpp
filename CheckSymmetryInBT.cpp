@@ -25,15 +25,8 @@ public:
 };
 
 
-// Helper function to create a sample tree
 TreeNode* buildSampleTree() {
-    /*
-           1
-         /   \
-        2     2
-       / \   / \
-      3   4 4   3
-    */
+   
     TreeNode* root = new TreeNode(1);
     root->left = new TreeNode(2);
     root->right = new TreeNode(2);
