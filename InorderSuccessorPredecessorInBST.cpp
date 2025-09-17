@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Node definition
 struct TreeNode {
     int val;
     TreeNode* left;
@@ -9,7 +8,6 @@ struct TreeNode {
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
 
-// BST utility functions
 TreeNode* insert(TreeNode* root, int val) {
     if (!root) return new TreeNode(val);
     if (val < root->val) root->left = insert(root->left, val);
@@ -19,19 +17,17 @@ TreeNode* insert(TreeNode* root, int val) {
 
 class Solution {
 public:
-    // find maximum in subtree
+
     TreeNode* findMax(TreeNode* node) {
         while (node && node->right) node = node->right;
         return node;
     }
 
-    // find minimum in subtree
     TreeNode* findMin(TreeNode* node) {
         while (node && node->left) node = node->left;
         return node;
     }
 
-    // function to find predecessor and successor
     pair<int,int> findPreSuc(TreeNode* root, int key) {
         TreeNode* pre = NULL;
         TreeNode* suc = NULL;
@@ -39,18 +35,17 @@ public:
 
         while (curr) {
             if (curr->val == key) {
-                // predecessor = max in left subtree
+
                 if (curr->left) pre = findMax(curr->left);
-                // successor = min in right subtree
                 if (curr->right) suc = findMin(curr->right);
                 break;
             } 
             else if (key < curr->val) {
-                suc = curr;  // possible successor
+                suc = curr;  
                 curr = curr->left;
             } 
             else {
-                pre = curr;  // possible predecessor
+                pre = curr;  
                 curr = curr->right;
             }
         }
@@ -59,7 +54,6 @@ public:
     }
 };
 
-// inorder traversal for checking BST structure
 void inorder(TreeNode* root) {
     if (!root) return;
     inorder(root->left);
@@ -71,7 +65,6 @@ int main() {
     TreeNode* root = NULL;
     int keys[] = {50, 30, 20, 40, 70, 60, 80};
 
-    // build BST
     for (int val : keys) {
         root = insert(root, val);
     }
