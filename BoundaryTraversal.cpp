@@ -42,7 +42,7 @@ public:
             if (curr->right) curr = curr->right;
             else curr = curr->left;
         }
-        // Add in reverse order
+
         for (int i = temp.size()-1; i >= 0; i--) {
             res.push_back(temp[i]);
         }
@@ -51,7 +51,7 @@ public:
     vector<int> boundaryTraversal(TreeNode* root) {
         vector<int> res;
         if (!root) return res;
-        if (!isLeaf(root)) res.push_back(root->val); // root is part of boundary
+        if (!isLeaf(root)) res.push_back(root->val); 
         addLeftBoundary(root, res);
         addLeaves(root, res);
         addRightBoundary(root, res);
@@ -59,18 +59,8 @@ public:
     }
 };
 
-// ----------- MAIN FUNCTION TO TEST -----------
 int main() {
-    /*
-            1
-           / \
-          2   3
-         / \   \
-        4   5   6
-           / \  /
-          7  8 9
-    */
-
+   
     TreeNode* root = new TreeNode(1);
     root->left = new TreeNode(2);
     root->right = new TreeNode(3);
