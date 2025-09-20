@@ -11,38 +11,27 @@ struct TreeNode {
 
 class Solution {
 public:
-    int maxSum; // global maximum
+    int maxSum; 
 
     int maxPathDown(TreeNode* root) {
         if (!root) return 0;
 
-        // compute max path sum starting from left and right child
-        int left = max(0, maxPathDown(root->left));   // ignore negative paths
+        int left = max(0, maxPathDown(root->left));  
         int right = max(0, maxPathDown(root->right));
 
-        // path passing through root = left + root + right
         maxSum = max(maxSum, left + right + root->val);
 
-        // return max path extending upwards
         return root->val + max(left, right);
     }
 
     int maxPathSum(TreeNode* root) {
-        maxSum = INT_MIN; // handle negative values
+        maxSum = INT_MIN; 
         maxPathDown(root);
         return maxSum;
     }
 };
 
-// ----------- MAIN FUNCTION TO TEST -----------
 int main() {
-    /*
-            -10
-            /  \
-           9   20
-              /  \
-             15   7
-    */
 
     TreeNode* root = new TreeNode(-10);
     root->left = new TreeNode(9);
