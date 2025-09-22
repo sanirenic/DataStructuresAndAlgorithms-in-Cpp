@@ -48,15 +48,8 @@ public:
     }
 };
 
-// Helper function to create a sample tree
 TreeNode* buildSampleTree() {
-    /*
-            10
-           /  \
-          5   15
-         / \    \
-        1   8    7
-    */
+    
     TreeNode* root = new TreeNode(10);
     root->left = new TreeNode(5);
     root->right = new TreeNode(15);
